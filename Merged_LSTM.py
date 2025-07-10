@@ -40,7 +40,7 @@ class LSTM_layer(nn.Module):
         return normalized_tensor
 
 
-   
+
 class LSTM_main(nn.Module):
     def __init__(self, input_dim, hidden_dim, num_layers, output_dim, dropout, continue_factor):
 
@@ -84,7 +84,6 @@ class MergedLSTM(nn.Module):
                         dropout=dropout,
                         output_weight=output_weight) for input_dim in input_dims])
         
-        # 메인 LSTM 정의
         self.lstm_main = LSTM_main(input_dim=hidden_dim,
                                    hidden_dim=hidden_dim,
                                    num_layers=num_layers_main,
